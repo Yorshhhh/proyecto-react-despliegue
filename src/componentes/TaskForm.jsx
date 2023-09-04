@@ -9,7 +9,6 @@ function TaskForm() {
 
   const handdleSubmit = (e) => {
     e.preventDefault();
-    console.log(title, description);
     createTask({ title, description });
 
     setTitle("");
@@ -17,7 +16,8 @@ function TaskForm() {
   };
   return (
     <div className="max-w-md mx-auto">
-      <h1 className="text-2xl text-white font-bold mb-3">Agrega un Departamento</h1>
+      <p>Esto esta escrito desde TaskForm</p>
+      <h1 className="text-2xl text-black font-bold mb-3">Agrega un Departamento</h1>
       <form onSubmit={handdleSubmit} className="bg-slate-500 p-5 mb-4">
         <input
           placeholder="Escribe tu tarea"
@@ -36,7 +36,7 @@ function TaskForm() {
           value={description}
           className="bg-slate-300 px-3 w-full mb-2"
         ></textarea>
-        <button className="bg-indigo-500 px-3 py-1 hover:bg-indigo-400 text-white">Guardar</button>
+        <button className="bg-indigo-500 px-3 py-1 hover:bg-indigo-400 text-white rounded-md">Guardar</button>
       </form>
     </div>
   );
